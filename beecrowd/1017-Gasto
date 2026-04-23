@@ -1,0 +1,23 @@
+'''
+Problema: beecrowd | 1017
+Data: 2026.04.23
+Estudante: Matheus Felipe Garcia
+'''
+# Objetivo: Calcular e mostrar a quantidade de litros de combustível gasto em uma viagem
+
+# ---ANÁLISE (LIAC) ---
+# Entrada: Dois inteiros o primeiro é o tempo gasto na viagem em horas e o segundo é a velocidade média durantes a mesma em km/h
+# Processamento: tempo gasto na viagem velocidade média em km/h
+# Saída: Imprima a quantidade de litros necessária para realizar a viagem com três dígitos após o ponto decimal
+
+#  Lê a quantidade de litros gasto ao utilizar um automovel que faz 12KM/L
+TEMPO = float(input())
+
+# Fornecer a quantidade gasto na viagem em horas
+VELOCIDADE = int(input())
+
+# Calcular e mostrar a quantidade de litros de combustível gasto e fornece o tempo gasto na viagem em horas
+quantidade = TEMPO * VELOCIDADE / 12 
+
+# Exibe o resultado com três dígitos após o ponto decimal
+print(f"{quantidade:.3f}")
