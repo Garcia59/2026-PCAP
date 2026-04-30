@@ -1,0 +1,24 @@
+'''
+Problema: beecrowd | 1012
+Data: 2026.04.16
+Estudante: Matheus Felipe Garcia
+'''
+# Objetico: um programa que leia três valores com ponto flutuante de dupla precisão
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: três valores com ponto flutuante
+# Processamento: A,B e C Em seguida, calcule e mostre
+# Saída: O arquivo de saída deverá conter 5 linhas de dados
+
+# O valor calculado deve ser apresentado com 3 dígitos após o ponto decimal
+X = float(input())
+
+# Cada linha corresponde a uma das áreas descritas acima
+Y = int(input())
+Z = float(input())
+
+# conter 5 linhas de dados e deve ser apresentado com 3 dígitos após o ponto decimal
+print(f"TRIANGULO: {(X * Z) / 2:.3f}")
+print(f"CIRCULO: {3.14159 * Z ** 2:.3f}")
+print(f"TRAPEZIO: {((X + Y) * Z) / 2:.3f}")
+print(f"")
