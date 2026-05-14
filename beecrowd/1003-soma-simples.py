@@ -11,11 +11,11 @@ Estudante: Matheus Felipe Garcia
 # Saída: exibir no formato exato "SOMA = valor"
 
 # Leitura das variáveis (observe o enunciado - quantas entradas há?)
-A = 1
-B = 1
+A = int(input())
+B = int(input())
 
 # Cálculo
- + SOMA = 2
+SOMA = A + B
 
 # Saída - observe o formato exato no enunciado 
-print()
+print(f"SOMA = {SOMA}")
