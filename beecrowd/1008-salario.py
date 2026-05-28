@@ -12,11 +12,11 @@ Estudantes: Matheus Felipe Garcia
 
 # Leitura das entradas - observe o enunciado: quantas variáveis e de qual tipo?
 N = int(input())
-H = int(float())
-V = int(print())
+H = int(input())
+V = float(input())
 
 # Calcule o salário - use o 1009 como referência de estrutura
-SAL = N + H + V
+SAL = H * V
 
 # Saída - observe o formato exato e o número de casas decimais no enunciado
-print(f"TOTAL = R$ {SAL}")
+print(f"TOTAL = R$ {SAL:.2f}")
