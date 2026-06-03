@@ -1,10 +1,28 @@
-Jogo Adivinhe o Número
-Estudante: Matheus Felipe 
-Data:02.06.2026
+Jogo: Adivinhe o Número
+Estudante: Matheus Felipe
+Data: 02/06/2026
 
-Descrição do jogo
-Basicamente o jogo funciona da seguinte forma tem tem nivis nivel 1 que vai do numero 1 a 10 e vc tem 3 chances para acertar o número o nivel 2 vai de 1 a 100 e você tem 5 chances para acertar o numero o tem o nivel 3 que vai de 1 a 1000 e vc tem 10 chances para acertar o número correto. O jogo da dicas se vc chutou um número acima do número correto ele fala Muito alto! e se vc chutou muito abaixo do número aparece Muito baixo! e se vc acertou claramente vai aparece Acertou 
+Descrição do Jogo
+
+Basicamente, o jogo funciona da seguinte forma: existem três níveis.
+
+* Nível 1: o número secreto vai de 1 a 10 e o jogador tem 3 chances para acertar.
+* Nível 2: o número secreto vai de 1 a 100 e o jogador tem 5 chances para acertar.
+* Nível 3: o número secreto vai de 1 a 1000 e o jogador tem 10 chances para acertar.
+
+O jogo dá dicas para ajudar o jogador. Se o número digitado for maior que o número correto, aparece a mensagem: “Muito alto!”. Se o número digitado for menor que o número correto, aparece a mensagem: “Muito baixo!”. Se o jogador acertar, aparece a mensagem: “Acertou!”.
+
 Como Jogar
-você inicia o jogo ele vai te pedir para vc escolher um dos três nives ex escolhi o 2 depois de escolher ta na hora de vc começar a chutar de numero 1 a 100 chutei 10 e falou Muito Baixo então no proximo chute vc deve chutar um numero maior que 10 agora numero 30 ele falou Muito Alto então sabemos que o número esta entre 10 e 30 Simples
+
+Ao iniciar o jogo, o jogador deve escolher um dos três níveis. Por exemplo, se escolher o nível 2, deverá tentar adivinhar um número entre 1 e 100.
+
+Exemplo:
+
+* Primeiro chute: 10 → o jogo responde “Muito baixo!”.
+* Segundo chute: 30 → o jogo responde “Muito alto!”.
+
+Com isso, sabemos que o número correto está entre 10 e 30.
+
 O que Pratiquei
-pratiquei Raciocínio Logico aprendemos que para fazer um jogo precisa ter regras 
+
+Pratiquei raciocínio lógico. Aprendi que, para criar um jogo, é preciso definir regras e organizar a lógica do funcionamento.
