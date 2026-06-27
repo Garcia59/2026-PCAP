@@ -1,0 +1,40 @@
+# ════════════════════════════════════════════════════════════
+# Disciplina : Pensamento Computacional, Algoritmos e Programação (PCAP)
+# Projeto    : Jogo "Par ou Ímpar"
+# Arquivo    : par_impar.py
+# Autor      : [Matheus Felipe]
+# Data       : [25.06.2026]
+# ════════════════════════════════════════════════════════════
+
+import random
+
+def verificar_vencedor(soma):
+    if soma % 2 == 0:
+        return "Par"
+    else:
+        return "Ímpar"
+    
+vitorias = 0 
+
+for rodada in range(5):
+    print(f"\nRodada {rodada + 1}")
+
+    numero = int(input("Digite um número de 0 a 5: "))
+    aposta = input("Escolha par ou impar: ").lower()
+
+    maquina = random.randint(0, 5)
+    soma = numero + maquina
+
+    resultado = verificar_vencedor(soma)
+
+    print("Máquina:", maquina)
+    print("Soma:", soma)
+    print("Resultado:", resultado)
+
+    if aposta == resultado:
+        print("Você venceu!")
+        vitorias += 1 
+    else:
+        print("Você perdeu!")
+
+print(f"\nTotal de vitórias: {vitorias}")
