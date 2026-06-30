@@ -29,9 +29,9 @@ for rodada in range(5):
     print("Resultado:", resultado.capitalize())
 
     if aposta == resultado:
-        print("Você venceu!")
+        print("🏆Você venceu!")
         vitorias += 1 
     else:
-        print("Você perdeu!")
+        print("👎Você perdeu!")
 
 print(f"\nTotal de vitórias: {vitorias}")
