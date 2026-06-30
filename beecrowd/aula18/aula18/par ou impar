@@ -3,7 +3,7 @@
 # Projeto    : Jogo "Par ou Ímpar"
 # Arquivo    : par_impar.py
 # Autor      : [Matheus Felipe]
-# Data       : [25.06.2026]
+# Data       : [30.06.2026]
 # ════════════════════════════════════════════════════════════
 
 import random
