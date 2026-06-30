@@ -1,4 +1,3 @@
-🔢 Par ou Ímpar
 ​Jogo de Par ou Ímpar feito em Python na disciplina PCAP (Aula 18). Você joga contra o computador em uma melhor de 5 rodadas, com placar.​
 
 ▶️ Como jogar
@@ -26,4 +25,5 @@ Extensão/originalidade .....: par_impar.py, linha 34 (melhor de 5 placar de vit
 ​
 Jogo de Par ou Ímpar feito em Python na disciplina PCAP (Aula 18).
 Você joga contra o computador em uma melhor de 5 rodadas, com placar.
-​
+
+Autor: [Matheus Felipe]
