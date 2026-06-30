@@ -9,10 +9,7 @@
 import random
 
 def verificar_vencedor(soma):
-    if soma % 2 == 0:
-        return "Par"
-    else:
-        return "Ímpar"
+    return "par" if soma % 2 == 0 else "impar"
     
 vitorias = 0 
 
@@ -29,7 +26,7 @@ for rodada in range(5):
 
     print("Máquina:", maquina)
     print("Soma:", soma)
-    print("Resultado:", resultado)
+    print("Resultado:", resultado.capitalize())
 
     if aposta == resultado:
         print("Você venceu!")
