@@ -19,3 +19,11 @@ def ler_numero(mensagem, minimo, maximo):
     for n in range(minimo, maximo + 1):
         numero.append(str(n))
     return int(ler_opcao(mensagem, numero))
+
+def ler_numero(mensagem):
+    while True:
+        try:
+            numero = int(input(mensagem))
+            return numero
+        except ValueError:
+            print('Digite um número válido!')
