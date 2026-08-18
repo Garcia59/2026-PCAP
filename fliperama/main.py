@@ -12,11 +12,13 @@ from adivinhe import jogar_adivinhe
 from ppt import jogar_ppt
 from parimpar import jogar_parimpar
 from modulos import ler_opcao
-from placar import carregar_placar, salvar_placar
+from placar import salvar_placar, carregar_placar
+from jogadores import menu_jogadores, salvar_jogadores, carregar_jogadores
+
 
 NOME_DO_DONO = 'MATHEUS.FELIPE'
 
-OPCOES = ['0', '1', '2', '3', '9']
+OPCOES = ['0', '1', '2', '3', '4']
 
 NOMES_DOS_JOGOS = [
     'Adivinhe o Numero',
@@ -24,7 +26,9 @@ NOMES_DOS_JOGOS = [
     'Par ou Impar'
 ]
 
+
 vezes_jogado = carregar_placar()
+jogadores = carregar_jogadores()
 
 nome_jogador = input('Quem está jogando? ')
 
@@ -33,57 +37,82 @@ def mostrar_placar():
     titulo('PLACAR')
 
     for i in range(3):
-        print(NOMES_DOS_JOGOS[i] + ': ' + str(vezes_jogado[i]) + 'x')
+        print(
+            NOMES_DOS_JOGOS[i]
+            + ': '
+            + str(vezes_jogado[i])
+            + 'x'
+        )
 
 
 while True:
     titulo('FLIPERAMA DO ' + NOME_DO_DONO)
 
-    print('Jogador: ' + nome_jogador)
     linha()
 
-    mostrar_placar()
-
-    linha()
-
-    print('1 - Jogo Adivinhe o Número')
-    print('2 - Pedra-Papel-Tesoura')
-    print('3 - Par ou Impar')
-    print('9 - Zerar o placar')
-    print('0 - Sair do Fliperama')
+    print('[1] Adivinhe o Numero')
+    print('[2] Pedra-Papel-Tesoura')
+    print('[3] Par ou Impar')
+    print('[4] Jogadores')
+    print('[0] Sair')
 
     linha()
 
-    opcao = ler_opcao('Escolha uma opção', OPCOES)
+    opcao = ler_opcao('Sua escolha', OPCOES)
 
     if opcao == '0':
         salvar_placar(vezes_jogado)
+        salvar_jogadores(jogadores)
+
         titulo('Ate a proxima!')
         break
 
-    elif opcao == '9':
-        vezes_jogado = [0, 0, 0]
-        salvar_placar(vezes_jogado)
-        print('Placar zerado!')
+    elif opcao == '4':
+        menu_jogadores(jogadores)
 
-    else:
-        indice = int(opcao) - 1
+    elif opcao == '1':
+        jogar_adivinhe()
 
-        if opcao == '1':
-            jogar_adivinhe()
-
-        elif opcao == '2':
-            jogar_ppt()
-
-        elif opcao == '3':
-            jogar_parimpar()
-
-        vezes_jogado[indice] = vezes_jogado[indice] + 1
-
+        vezes_jogado[0] = vezes_jogado[0] + 1
         salvar_placar(vezes_jogado)
 
         arquivo = open('historico.txt', 'a')
         arquivo.write(
-            nome_jogador + ' - ' + NOMES_DOS_JOGOS[indice] + '\n'
+            nome_jogador
+            + ' - '
+            + NOMES_DOS_JOGOS[0]
+            + '\n'
         )
         arquivo.close()
+
+    elif opcao == '2':
+        jogar_ppt()
+
+        vezes_jogado[1] = vezes_jogado[1] + 1
+        salvar_placar(vezes_jogado)
+
+        arquivo = open('historico.txt', 'a')
+        arquivo.write(
+            nome_jogador
+            + ' - '
+            + NOMES_DOS_JOGOS[1]
+            + '\n'
+        )
+        arquivo.close()
+
+    elif opcao == '3':
+        jogar_parimpar()
+
+        vezes_jogado[2] = vezes_jogado[2] + 1
+        salvar_placar(vezes_jogado)
+
+        arquivo = open('historico.txt', 'a')
+        arquivo.write(
+            nome_jogador
+            + ' - '
+            + NOMES_DOS_JOGOS[2]
+            + '\n'
+        )
+        arquivo.close()
+
+    input('Pressione Enter para voltar ao menu... ')
