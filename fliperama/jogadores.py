@@ -1,6 +1,6 @@
 from os.path import exists
 from telas import titulo, linha
-from modulos import ler_opcao
+from modulos import ler_opcao, ler_texto
 
 ARQUIVO =   'jogadores.csv'
 
@@ -28,19 +28,28 @@ ARQUIVO =   'jogadores.csv'
 #       E o cadastro e uma lista dessas listas.
 #=======================================================================
 
+from os.path import exists
+from telas import titulo, linha
+from modulos import ler_opcao, ler_texto
+
+ARQUIVO =   'jogadores.csv'
 
 def cadastrar(jogadores):
+    '''
+    Pergunta apelido e nome e acrescenta um jogador ao cadastro.
+
+    Nao devolve nada: o cadastro muda no lugar.
+    '''
     titulo('NOVO JOGADOR')
 
-    apelido = input('Apelido (sem espacos): ').strip().lower()
-    nome = input('Nome completo: ').strip()
+    apelido = ler_texto('Apelido (sem espacos)').lower()
+    nome = ler_texto('Nome completo')
 
     novo = [apelido, nome, '0']
     jogadores.append(novo)
 
     print('Jogador ' + apelido + ' cadastrado.')
     linha()
-
 
 def listar(jogadores):
     titulo('JOGADORES CADASTRADOS')
@@ -55,13 +64,21 @@ def listar(jogadores):
 
 
 def buscar(jogadores, apelido):
-    # Devolver a POSICAO do jogador na lista, ou -1 se nao achar.
+    '''
+    Procura um apelido no cadastro e diz ONDE ele esta.
+
+    Parametros:
+        jogadores (list) - o cadastro inteiro
+        apelido   (str)  - o apelido procurado, em minusculas
+
+    Retorno:
+        int - a posicao do jogador na lista, ou -1 se nao achar
+    '''
     for i in range(len(jogadores)):
         if jogadores[i][0] == apelido:
             return i
 
     return -1
-
 
 def alterar(jogadores):
     listar(jogadores)
@@ -74,12 +91,15 @@ def alterar(jogadores):
     else:
         print('Nome atual: ' + jogadores[i][1])
         jogadores[i][1] = input('Nome novo: ').strip()
-        print('Pronto. Agora e ' + jogadores[i][1] + '-')
+        print('Pronto. Agora e ' + jogadores[i][1] + '.')
 
         linha()
 
 
 def excluir(jogadores):
+    '''
+    # escreva aqui, em uma ou duas linhas, o que esta funcao faz'
+    '''
     listar(jogadores)
 
     apelido = input('Apelido de quem vai sair do cadastro: ').strip().lower()
@@ -116,17 +136,16 @@ def carregar_jogadores():
         return[]
 
     arquivo = open(ARQUIVO, 'r')
-    linha = arquivo.readlines()
+    linhas = arquivo.readlines()
     arquivo.close()
 
     lidos = []
-    for linha_lida in linha:
+    for linha_lida in linhas:
         campos = linha_lida.strip().split(',')
         lidos.append(campos)
 
-        return lidos
+    return lidos
 
-    
 def menu_jogadores(jogadores):
     while True:
         titulo('CADASTRO DE JOGADORES')

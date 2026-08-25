@@ -30,7 +30,7 @@ NOMES_DOS_JOGOS = [
 vezes_jogado = carregar_placar()
 jogadores = carregar_jogadores()
 
-nome_jogador = input('Quem está jogando? ')
+nome_jogador = input('Quem esta jogando? ')
 
 
 def mostrar_placar():
@@ -61,9 +61,9 @@ while True:
     opcao = ler_opcao('Sua escolha', OPCOES)
 
     if opcao == '0':
+        mostrar_placar()
         salvar_placar(vezes_jogado)
         salvar_jogadores(jogadores)
-
         titulo('Ate a proxima!')
         break
 
