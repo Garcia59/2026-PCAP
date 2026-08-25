@@ -39,4 +39,4 @@ A funcao `ler_texto` ficou no `modulos.py` porque
 
 ## O que ainda nao funciona
 
-- Nome com virgula quebra a linha do arquivo, porque a virgula e o separador.
+- Nome com virgula quebra a linha do arquivo, porque a virgula e o separador

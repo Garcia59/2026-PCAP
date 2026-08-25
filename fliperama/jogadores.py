@@ -12,7 +12,7 @@ ARQUIVO =   'jogadores.csv'
 # Aula         : 22 - MeuApp v2.0: o cadastro de jogadores
 # Autor        : [Matheus Felipe]
 # Conceitos    : Registro como lista de campos, cadastro como lista
-#                de listas, cadastrar, listar, buscar, alterar
+#                de listas, cadastrar, listar, buscar, alterar,
 #                excluir, persistencia em arquivo .csv
 # =======================================================================
 #

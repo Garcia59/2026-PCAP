@@ -11,7 +11,7 @@
 CAR = '#'
 TAM = 60
 
-# Função para desenha uma linha na tela
+# Funcao para desenha uma linha na tela
 def linha():
     print(CAR * TAM)
 
