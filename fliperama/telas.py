@@ -4,7 +4,7 @@
 # Aula:       20
 # Autor:      [Matheus Felipe]
 # Data:       2026.08.04
-# Conceitos:  []
+# Conceitos:  [.]
 # =============================================
 
 # Definição da Moldura Caracteres e Tamanho

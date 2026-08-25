@@ -4,10 +4,10 @@
 # Aula:       20
 # Autor:      [Matheus Felipe]
 # Data:       2026.08.04
-# Conceitos:  []
+# Conceitos:  [.]
 # =============================================
 
-# importar bibliotecas e funções de arquivo (módulos)
+# importar bibliotecas e funcoes de arquivo (módulos)
 from random import randint
 from telas import titulo, linha
 from modulos import ler_numero

@@ -6,7 +6,7 @@
 # Data       : 2026.08.11
 # ==================================================================
 
-# import função randint da bibloteca random, que sorteia um número inteiro aleatório em um intervalo definido
+# import funcao randint da bibloteca random, que sorteia um número inteiro aleatório em um intervalo definido
 from random import randint
 
 # importa as funções titulo e linha do arquivo telas.py
