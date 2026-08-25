@@ -15,7 +15,7 @@ TAM = 60
 def linha():
     print(CAR * TAM)
 
-# Função para desenha um texto entre linhas
+# Funcao para desenha um texto entre linhas
 def titulo(texto):
     linha()
     print(texto.center(TAM))

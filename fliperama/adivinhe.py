@@ -4,7 +4,7 @@
 # Aula:       20
 # Autor:      [Matheus Felipe]
 # Data:       2026.08.04
-# Conceitos:  []
+# Conceitos:  [.]
 # =============================================
 
 # importar bibliotecas e funcoes de arquivo (módulos)
