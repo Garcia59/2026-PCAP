@@ -40,3 +40,34 @@ A funcao `ler_texto` ficou no `modulos.py` porque
 ## O que ainda nao funciona
 
 - Nome com virgula quebra a linha do arquivo, porque a virgula e o separador.
+
+## Autoavaliacao
+
+Conceito que eu acho que a minha entrega vale: [ B  acredito que um B estou me esforsando des do inicio dessas aulas]
+
+### Mapa do projeto: onde esta cada coisa
+
+| O que | Arquivo | Funcao |
+|---|---|---|
+| Adivinhe o Numero | `adivinhe.py` | `jogar_adivinhe` |
+| Pedra-Papel-Tesoura | `ppt.py` | `jogar_ppt` |
+| Par ou Impar | `parimpar.py` | `jogar_parimpar` |
+| [Jogo meu autoral fliperama] | `meujogo.py` | `jogar_meujogo` |
+| Cadastro de jogadores | `jogadores.py` | `menu_jogadores` |
+| Ranking Top 10 | `jogadores.py` | `listar` |
+| Placar que sobrevive | `placar.py` | `salvar_placar`, `carregar_placar` |
+
+### Criterio por criterio: o nivel e a prova
+
+| Criterio | Nivel | Onde esta a prova (arquivo e linha) |
+|---|---|---|
+| 1. Estrutura e registro | [B] | [arquivo, linha] |
+| 2. As quatro operacoes | [B] | [arquivo, linha] |
+| 3. Busca e indice | [B] | [arquivo, linha] |
+| 4. Persistencia e primeira execucao | [B] | [arquivo, linha] |
+| 5. Documentacao e autoavaliacao | [B] | [arquivo, linha] |
+| 6. Jogo autoral e reuso | [B] | [arquivo, linha] |
+
+### Usei IA
+
+[ use para me ajudar a organizar a documentacao, entender os erros do codigo, nao apenas copiei olhei li para aprender a lidar quando acontecer esse erros novamentes]

@@ -4,7 +4,7 @@
 # Aula:       20
 # Autor:      [Matheus Felipe]
 # Data:       2026.08.04
-# Conceitos:  [.]
+# Conceitos:  [..]
 # =============================================
 
 from telas import titulo, linha
@@ -14,11 +14,11 @@ from parimpar import jogar_parimpar
 from modulos import ler_opcao
 from placar import salvar_placar, carregar_placar
 from jogadores import menu_jogadores, salvar_jogadores, carregar_jogadores
-
+from meujogo import jogar_meujogo
 
 NOME_DO_DONO = 'MATHEUS.FELIPE'
 
-OPCOES = ['0', '1', '2', '3', '4']
+OPCOES = ['0', '1', '2', '3', '4', '5']
 
 NOMES_DOS_JOGOS = [
     'Adivinhe o Numero',
@@ -54,6 +54,7 @@ while True:
     print('[2] Pedra-Papel-Tesoura')
     print('[3] Par ou Impar')
     print('[4] Jogadores')
+    print('[5] Meu Jogo')
     print('[0] Sair')
 
     linha()
@@ -101,18 +102,23 @@ while True:
         arquivo.close()
 
     elif opcao == '3':
-        jogar_parimpar()
+     jogar_parimpar()
 
-        vezes_jogado[2] = vezes_jogado[2] + 1
-        salvar_placar(vezes_jogado)
+    vezes_jogado[2] = vezes_jogado[2] + 1
+    salvar_placar(vezes_jogado)
 
-        arquivo = open('historico.txt', 'a')
-        arquivo.write(
-            nome_jogador
-            + ' - '
-            + NOMES_DOS_JOGOS[2]
-            + '\n'
-        )
-        arquivo.close()
+    arquivo = open('historico.txt', 'a')
+    arquivo.write(
+        nome_jogador
+        + ' - '
+        + NOMES_DOS_JOGOS[2]
+        + '\n'
+    )
+else:
+    jogar_meujogo()
 
-    input('Pressione Enter para voltar ao menu... ')
+    arquivo.close()
+
+
+
+input('Pressione Enter para voltar ao menu... ')

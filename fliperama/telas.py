@@ -7,7 +7,7 @@
 # Conceitos:  [.]
 # =============================================
 
-# Definição da Moldura Caracteres e Tamanho
+# Definicao da Moldura Caracteres e Tamanho
 CAR = '#'
 TAM = 60
 

@@ -7,7 +7,7 @@
 # Conceitos:  [.]
 # =============================================
 
-# importar bibliotecas e funcoes de arquivo (módulos)
+# importar bibliotecas e funcoes de arquivo (modulos)
 from random import randint
 from telas import titulo, linha
 from modulos import ler_numero
