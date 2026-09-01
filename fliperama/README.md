@@ -2,7 +2,7 @@
 
 Um fliperama de terminal com tres jogos, placar que nao esquece e
 cadastro de jogadores. Projeto da disciplina PCAP, 1 anao do Tecnico
-em Informatica do IFPR.
+em Informatica do IFPR
 
 ## O que ele faz
 

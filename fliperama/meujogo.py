@@ -5,63 +5,131 @@
 # Aula       : 23 - O jogo autoral do meu fliperama
 # Autor      : [Matheus Felipe]
 # Conceitos  : Reuso de modulo proprio, funcao sem retorno,
-#              entrada validada, contagem de partidas
+#              entrada validada. contagem de partidas
 # ============================================================
 
-from telas import titulo, linha       # gaveta VISUAL
-from modulos import ler_numero        # gaveta de ENTRADA validada
+from telas import titulo, linha
+from modulos import ler_numero
 
 
 def jogar_meujogo():
-    '''
-    [ele lista cadastra jogadores e lista voce pode jogar parimpar , ppt]
-    '''
+    """
+    Jogo do foguete:
+    desvie dos meteoros e tente fazer a maior pontuacao.
+    """
 
-    titulo("MEU JOGO")
+    import pygame
+    import random
 
-    # -------- DAQUI PARA BAIXO SEU: escreva SUA REGRA --------
-    n = ler_numero("Escolha um numero: ")
-    print("Voce escolheu " + str(n) + ".")
-    print("AQUI VAI A SUA REGRA: sortear, comparar, contar, decidir.")
-    # -------- ATE AQUI --------
-# Calculadora Simples em Python
+    pygame.init()
 
-print("=== Calculadora ===")
+    titulo("MEU JOGO - FOGUETE")
 
-# Entrada dos numeros
-num1 = float(input("Digite o primeiro numero: "))
-num2 = float(input("Digite o segundo numero: "))
+    # Tela
+    LARGURA = 800
+    ALTURA = 600
 
-# Escolha da operacao
-print("\nEscolha a operacao:")
-print("1 - Soma (+)")
-print("2 - Subtracao (-)")
-print("3 - Multiplicacao (*)")
-print("4 - Divisao (/)")
+    tela = pygame.display.set_mode((LARGURA, ALTURA))
+    pygame.display.set_caption("Foguete - Desvie dos Meteoros")
 
-opcao = input("Digite a opcao (1/2/3/4): ")
+    # Cores
+    PRETO = (0, 0, 0)
+    BRANCO = (255, 255, 255)
+    CINZA = (120, 120, 120)
 
-# Calculo
-if opcao == "1":
-    resultado = num1 + num2
-    print(f"Resultado: {num1} + {num2} = {resultado}")
+    # Foguete
+    foguete = pygame.Rect(380, 500, 40, 60)
+    velocidade = 7
 
-elif opcao == "2":
-    resultado = num1 - num2
-    print(f"Resultado: {num1} - {num2} = {resultado}")
+    # Meteoros
+    meteoros = []
+    velocidade_meteoro = 5
 
-elif opcao == "3":
-    resultado = num1 * num2
-    print(f"Resultado: {num1} * {num2} = {resultado}")
+    # Pontuacao
+    pontos = 0
+    fonte = pygame.font.Font(None, 36)
 
-elif opcao == "4":
-    if num2 != 0:
-        resultado = num1 / num2
-        print(f"Resultado: {num1} / {num2} = {resultado}")
-    else:
-        print("Erro: divisao por zero nao e permitida!")
+    relogio = pygame.time.Clock()
+    rodando = True
 
-else:
-    print("Opcao invalida!")
+    while rodando:
+
+        # Eventos
+        for evento in pygame.event.get():
+            if evento.type == pygame.QUIT:
+                rodando = False
+
+        # Teclas
+        teclas = pygame.key.get_pressed()
+
+        if teclas[pygame.K_LEFT] and foguete.left > 0:
+            foguete.x -= velocidade
+
+        if teclas[pygame.K_RIGHT] and foguete.right < LARGURA:
+            foguete.x += velocidade
+
+        # Criar meteoros
+        if random.randint(1, 30) == 1:
+            x = random.randint(0, LARGURA - 40)
+
+            meteoro = pygame.Rect(x, -40, 40, 40)
+            meteoros.append(meteoro)
+
+        # Movimentar meteoros
+        for meteoro in meteoros[:]:
+
+            meteoro.y += velocidade_meteoro
+
+            # Meteoro saiu da tela
+            if meteoro.top > ALTURA:
+                meteoros.remove(meteoro)
+                pontos += 1
+
+            # Colisao
+            elif foguete.colliderect(meteoro):
+                rodando = False
+
+        # Fundo
+        tela.fill(PRETO)
+
+        # Foguete
+        pygame.draw.polygon(
+            tela,
+            BRANCO,
+            [
+                (foguete.centerx, foguete.top),
+                (foguete.left, foguete.bottom),
+                (foguete.right, foguete.bottom)
+            ]
+        )
+
+        # Meteoros
+        for meteoro in meteoros:
+            pygame.draw.circle(
+                tela,
+                CINZA,
+                meteoro.center,
+                20
+            )
+
+        # Pontuacao
+        texto = fonte.render(
+            "Pontos: " + str(pontos),
+            True,
+            BRANCO
+        )
+
+        tela.blit(texto, (20, 20))
+
+        pygame.display.update()
+
+        relogio.tick(60)
+
+    pygame.quit()
+
+    print("Fim de jogo!")
+    print("Sua pontuacao foi:", pontos)
+
+    input("Pressione Enter para voltar ao menu...")
 
     linha()

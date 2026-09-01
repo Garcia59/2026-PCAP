@@ -4,7 +4,7 @@
 # Aula:       20
 # Autor:      [Matheus Felipe]
 # Data:       2026.08.04
-# Conceitos:  [..]
+# Conceitos:  [,]
 # =============================================
 
 from telas import titulo, linha
@@ -23,21 +23,21 @@ OPCOES = ['0', '1', '2', '3', '4', '5']
 NOMES_DOS_JOGOS = [
     'Adivinhe o Numero',
     'Pedra-Papel-Tesoura',
-    'Par ou Impar'
-    'Jogar meujogo'
+    'Par ou Impar',
+    'Meu Jogo'
 ]
-
 
 vezes_jogado = carregar_placar()
 jogadores = carregar_jogadores()
 
+# PERGUNTA O NOME ANTES DE COMEÇAR O MENU
 nome_jogador = input('Quem esta jogando? ')
 
 
 def mostrar_placar():
     titulo('PLACAR')
 
-    for i in range(3):
+    for i in range(4):
         print(
             NOMES_DOS_JOGOS[i]
             + ': '
@@ -103,22 +103,31 @@ while True:
         arquivo.close()
 
     elif opcao == '3':
-     jogar_parimpar()
+        jogar_parimpar()
 
-    vezes_jogado[2] = vezes_jogado[2] + 1
-    salvar_placar(vezes_jogado)
+        vezes_jogado[2] = vezes_jogado[2] + 1
+        salvar_placar(vezes_jogado)
 
-    arquivo = open('historico.txt', 'a')
-    arquivo.write(
-        nome_jogador
-        + ' - '
-        + NOMES_DOS_JOGOS[2]
-        + '\n'
-    )
-else: jogar_meujogo
+        arquivo = open('historico.txt', 'a')
+        arquivo.write(
+            nome_jogador
+            + ' - '
+            + NOMES_DOS_JOGOS[2]
+            + '\n'
+        )
+        arquivo.close()
 
-arquivo.close()
+    elif opcao == '5':
+        jogar_meujogo()
 
+        vezes_jogado[3] = vezes_jogado[3] + 1
+        salvar_placar(vezes_jogado)
 
-
-input('Pressione Enter para voltar ao menu... ')
+        arquivo = open('historico.txt', 'a')
+        arquivo.write(
+            nome_jogador
+            + ' - '
+            + NOMES_DOS_JOGOS[3]
+            + '\n'
+        )
+        arquivo.close()

@@ -33,7 +33,7 @@ vai jogar, acrescente uma linha aqui dizendo onde.]
 ##############################################
 === Calculadora ===
 Digite o primeiro numero:
-Digite o segundo numero:
+Digite o segundo numero;
 ##############################################
 [1] Adivinhe o Numero
 [2] Pedra-Papel-Tesoura

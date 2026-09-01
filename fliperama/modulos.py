@@ -4,7 +4,7 @@
 # Aula:       20
 # Autor:      [Matheus Felipe]
 # Data:       2026,08.04
-# Conceitos:  [Reaproveitamento, validacao, funcao que chama  funcao]
+# Conceitos:  [Reaproveitamento. validacao, funcao que chama  funcao]
 # =============================================
 
 def ler_opcao(mensagem, validas):

@@ -12,7 +12,7 @@ from random import randint
 # importa as funcoes titulo e linha do arquivo telas.py
 from telas import titulo, linha
 
-# importa a funcao ler_opcao que valida a entrada do usuário do arquivo modulos.py
+# importa a funcao ler_opcao que valida a entrada do usuario do arquivo modulos.py
 from modulos import ler_opcao
 
 # lista com PEDRA == posicao 0 ; PAPEL == 1 ; TESOURA == 2
