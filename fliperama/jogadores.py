@@ -13,7 +13,7 @@ ARQUIVO =   'jogadores.csv'
 # Autor        : [Matheus Felipe]
 # Conceitos    : Registro como lista de campos, cadastro como lista
 #                de listas cadastrar, listar, buscar, alterar,
-#                excluir persistencia em arquivo .csv
+#                excluir persistencia em arquivo csv
 # =======================================================================
 #
 # O QUE ESTE ARQUIVO E

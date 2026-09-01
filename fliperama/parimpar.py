@@ -3,7 +3,7 @@
 # Conceitos  : Jogo com modulo, lista como tabela de nomes,funçao com retorno, operador % para dar a volta
 # Base       : Jogo da Aula 17 (Atividade 11)
 # Autor      : [Matheus Felipe]
-# Data       : 2026.08.11
+# Data       : 2026.08,11
 # ==================================================================
 
 from telas import titulo, linha
@@ -14,9 +14,9 @@ import random
 def jogar_parimpar():
     titulo('PAR OU IMPAR')
 
-    numero = ler_numero('Digite um número: ')
+    numero = ler_numero('Digite um numero: ')
 
-    escolha = input('Você escolhe par ou impar? ').lower()
+    escolha = input('Voce escolhe par ou impar? ').lower()
 
     computador = random.randint(0, 10)
 

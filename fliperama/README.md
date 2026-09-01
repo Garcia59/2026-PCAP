@@ -6,7 +6,7 @@ em Informatica do IFPR.
 
 ## O que ele faz
 
-- Tres jogos pelo menu: Adivinhe o Numero, Pedra-Papel-Tesoura e Par ou Impar
+- quatro jogos pelo menu: Meu jogo Adivinhe o Numero, Pedra-Papel-Tesoura e Par ou Impar
 - Placar que conta quantas vezes cada jogo foi jogado e continua contando
 depois de fechar o programa 
 -Cadastro de jogadores: cadastrar, listar, alterar e excluir

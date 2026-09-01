@@ -24,6 +24,7 @@ NOMES_DOS_JOGOS = [
     'Adivinhe o Numero',
     'Pedra-Papel-Tesoura',
     'Par ou Impar'
+    'Jogar meujogo'
 ]
 
 
@@ -114,10 +115,9 @@ while True:
         + NOMES_DOS_JOGOS[2]
         + '\n'
     )
-else:
-    jogar_meujogo()
+else: jogar_meujogo
 
-    arquivo.close()
+arquivo.close()
 
 
 

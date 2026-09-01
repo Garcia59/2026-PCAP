@@ -3,7 +3,7 @@
 # Conceitos  : Jogo com modulo, lista como tabela de nomes,funçao com retorno, operador % para dar a volta
 # Base       : Jogo da Aula 17 (Atividade 11)
 # Autor      : [Matheus Felipe]
-# Data       : 2026.08.11
+# Data       : 2026,08.11
 # ==================================================================
 
 # import funcao randint da bibloteca random, que sorteia um número inteiro aleatório em um intervalo definido
@@ -12,10 +12,10 @@ from random import randint
 # importa as funcoes titulo e linha do arquivo telas.py
 from telas import titulo, linha
 
-# importa a função ler_opcao que valida a entrada do usuário do arquivo modulos.py
+# importa a funcao ler_opcao que valida a entrada do usuário do arquivo modulos.py
 from modulos import ler_opcao
 
-# lista com PEDRA == posição 0 ; PAPEL == 1 ; TESOURA == 2
+# lista com PEDRA == posicao 0 ; PAPEL == 1 ; TESOURA == 2
 JOGADAS = ['PEDRA', 'PAPEL', 'TESOURA']
 
 # mostra o ganhador
@@ -26,7 +26,7 @@ def quem_vence(jogador, computador):
         return 'jogador'
     return 'computador'
 
-# mostrar as opções de jogo
+# mostrar as opcoes de jogo
 def mostrar_jogadas():
     print('[0] Pedra')
     print('[1] Papel')

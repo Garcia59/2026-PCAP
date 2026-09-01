@@ -5,10 +5,7 @@ Autor: [Matheus Felipe]
 
 ## A regra
 
-[O jogador escolhe um numero de 1 a 5.
-Depois, o programa mostra o numero que foi escolhido.
-Por enquanto, o jogo apenas mostra uma mensagem no lugar onde ficara a regra principal.
-A partida termina depois que essa mensagem aparece.]
+[o Jogador escolhe um numero e depois aparece uma lista do numero 1 a 4 1 soma 2 subtracao 3 multiplicacao 4 divisao.]
 
 ## Como jogar
 
@@ -34,6 +31,9 @@ vai jogar, acrescente uma linha aqui dizendo onde.]
 [#############################################
                 FLIPERAMA DO MATHEUS                
 ##############################################
+=== Calculadora ===
+Digite o primeiro numero:
+Digite o segundo numero:
 ##############################################
 [1] Adivinhe o Numero
 [2] Pedra-Papel-Tesoura

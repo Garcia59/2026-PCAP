@@ -3,7 +3,7 @@
 # Conceitos  : Jogo com modulo, lista como tabela de nomes,funçao com retorno, operador % para dar a volta
 # Base       : Jogo da Aula 17 (Atividade 11)
 # Autor      : [Matheus Felipe]
-# Data       : 2026.08.11
+# Data       : 2026,08.11
 # ==================================================================
 
 def carregar_placar():
