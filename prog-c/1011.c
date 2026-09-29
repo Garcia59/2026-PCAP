@@ -8,8 +8,8 @@ Matheus Felipe Garcia
 
 int main(){
     double r=0, v=0;
-    scanf("%lf", &r);
+    scanf("%lf",&r);
     v = (4.0/3.0)*3.14159*(r*r*r);
-    printf("VOLUME  = %.3lf\n", v);
+    printf("VOLUME = %.3lf\n", v);
     return 0;
 }
