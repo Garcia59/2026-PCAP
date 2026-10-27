@@ -2,7 +2,7 @@
 * Disciplina: 2026-PCAP
 * Projeto   : MeuApp v3.0 - o Fliperama em C (Aula 28)
 * Autor     : Matheus Felipe Garcia
-*  LIAC     : Menu com validacao, cadastro de jogadores em vetores com
+*  LIAC     : Menu com validacao cadastro de jogadores em vetores com
 *             contagem, um jogo que conta partidas por jogadores e o
 *             cadastro salvo em arquivo na saida e relido na entrada.
 */

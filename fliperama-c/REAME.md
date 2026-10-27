@@ -8,8 +8,8 @@ gcc -Wall fliperama.c -o fliperama
 ./fliperama
 
 ## Arquivos
-- fliperama.c: [uma linha]
-- jogadores.csv: [uma linha: o que cada coluna guarda]
+- fliperama.c [uma linha]
+- jogadores.csv [uma linha: o que cada coluna guarda]
 
 ## Python x C: o que mudou
 | O que | No jogadores.py (linha) | No fliperama.c (linha) |
