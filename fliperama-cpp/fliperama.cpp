@@ -2,7 +2,7 @@
  * Disciplina: 2026-PCAP
  * Projeto   : MeuApp v4.0 - o Fliperama em C++ (Aula 32)
  * Autor     : Matheus Felipe Garcia
- * LIAC      : Menu com validação, cadastro de jogadores em dois vectors
+ * LIAC      : Menu com validação cadastro de jogadores em dois vectors
  *             que crescem, um jogo que conta partidas por jogador e o
  *             cadastro salvo em arquivo na saida e relido na entrada.
 */
