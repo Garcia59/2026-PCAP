@@ -1,7 +1,7 @@
 # Fliperama em C++ (MeuApp v4.0)
 
 ## O que é
-O Fliperama é um programa que permite cadastrar jogadores, listar apelidos e jogar o jogo de adivinhar números, contando as partidas de cada jogador.
+O Fliperama é um programa que permite cadastrar jogadores, listar apelidos e jogar o jogo de adivinhar números, contando as partidas de cada jogador
 
 Ele foi desenvolvido como projeto da disciplina 2026-PCAP, utilizando C++ para organizar os jogos e salvar os dados em arquivos.
 
