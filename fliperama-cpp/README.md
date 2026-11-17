@@ -13,7 +13,7 @@ g++ -Wall fliperama.cpp -o fliperama
 
 ## Arquivos
 - **fliperama.cpp:** contém o código principal, menus, cadastro de jogadores e o jogo.
-- **jogadores.csv:** guarda os apelidos dos jogadores e a quantidade de partidas de cada um.
+- **jogadores.csv:** guarda os apelidos dos jogadores e a quantidade de partidas de cada um
 
 ## C x C++: o que mudou
 
